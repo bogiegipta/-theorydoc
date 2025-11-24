@@ -1,0 +1,376 @@
+/* Основные цвета темы */
+:root {
+  --primary-color: #28a745;
+  --secondary-color: #ffc107;
+  --accent-color: #fd7e14;
+}
+
+/* === БАЗОВЫЕ СТИЛИ === */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* === НАВИГАЦИЯ === */
+.navbar-brand ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand li {
+  display: inline-block;
+  margin-right: 15px;
+  list-style: none;
+}
+
+.navbar-brand a.color,
+.navbar-brand button.color {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-brand a.color:hover,
+.navbar-brand button.color:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* === СТИЛИ КАРТОЧЕК ТОВАРОВ === */
+.album {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7ec 100%);
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(40, 167, 69, 0.30) !important;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(40, 167, 69, 0.30) !important;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.old-price {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* === КНОПКИ === */
+.btn-group {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-outline-secondary {
+  border: 2px solid #ddd;
+  color: #666;
+  background: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background: #28a745;
+  border-color: #28a745;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* === БЕЙДЖИ И ИНДИКАТОРЫ === */
+.text-body-secondary {
+  background: #f0f2f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.text-body-secondary::before {
+  content: "⏱";
+  margin-right: 5px;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4757;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.badge.bg-secondary:hover {
+  background-color: #28a745 !important;
+  transform: translateY(-2px);
+}
+
+.pet-food-badge {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+}
+
+.natural-badge {
+  background: linear-gradient(45deg, #fd7e14, #ffc107);
+  color: white;
+}
+
+/* === СТИЛИ ДЛЯ СТРАНИЦЫ УСЛУГ === */
+.services-icon {
+  font-size: 3rem;
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.services-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  height: 100%;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* === FAQ АККОРДИОН === */
+.accordion-button:not(.collapsed) {
+  background-color: #e8f5e8;
+  color: #28a745;
+}
+
+.accordion-button:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+/* === МОДАЛЬНОЕ ОКНО === */
+.modal-content {
+  border-radius: 12px;
+}
+
+.modal-header {
+  background: linear-gradient(45deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-body h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #28a745;
+}
+
+.modal-body h3 {
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* === ПАГИНАЦИЯ === */
+.pagination .page-link {
+  color: #28a745;
+  transition: all 0.2s ease;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-link:hover {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+/* === СТИЛИ ДЛЯ БЛОГА === */
+.featured-article {
+  border: none;
+  box-shadow: 0 15px 35px rgba(40, 167, 69, 0.2) !important;
+}
+
+.featured-article .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.news-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: none;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.news-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* === ПРЕИМУЩЕСТВА === */
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.d-flex i.bi {
+  font-size: 2rem;
+  color: #28a745;
+}
+
+/* === БУТСТРАП ПЛАШКИ === */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background: linear-gradient(45deg, #28a745 0%, #20c997 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* === АДАПТИВНОСТЬ === */
+@media (max-width: 768px) {
+  .featured-article .card-img-top {
+    height: 200px;
+  }
+  .news-card .card-img-top {
+    height: 150px;
+  }
+  .navbar-brand li {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 200px;
+  }
+  .card-text {
+    font-size: 14px;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
